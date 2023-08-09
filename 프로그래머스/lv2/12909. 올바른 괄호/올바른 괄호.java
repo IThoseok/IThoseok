@@ -29,7 +29,6 @@ class Solution {
             return false;
         }
 
-
         return answer;
     }
 }
