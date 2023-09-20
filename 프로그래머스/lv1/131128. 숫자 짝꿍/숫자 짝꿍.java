@@ -27,17 +27,11 @@ class Solution {
         for (char i = '9'; i >= '0'; i--) {
             int xCount = xMap.getOrDefault(i, 0);
             int yCount = yMap.getOrDefault(i, 0);
-            if (xCount >= yCount) {
-                for (int j = 0; j < yCount; j++) {
-                    answer.append(i);
-                }
-            } else {
-                for (int j = 0; j < xCount; j++) {
-                    answer.append(i);
-                }
+            for (int j = 0; j < Math.min(xCount,yCount); j++) {
+                answer.append(i);
             }
         }
-        
+         
         if (answer.length() == 0) {
             return "-1";
         } else if (answer.toString().replaceAll("0", "").isEmpty()) {
