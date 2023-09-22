@@ -18,7 +18,8 @@ class Solution {
                 zero++;
             }
         }
-        System.out.println(count);
+        
+        
         answer[0] = 7-zero-count;
         answer[1] = 7-count;
         if(answer[0] == 7){
@@ -27,6 +28,7 @@ class Solution {
         if(answer[1] == 7){
             answer[1] = 6;
         }
+        
         return answer;
     }
 }
