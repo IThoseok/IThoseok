@@ -2,8 +2,7 @@ import java.util.*;
 
 class Solution {
     public int solution(int n, int[] lost, int[] reserve) {
-        int answer = 0;
-        int count = 0;
+        int answer = n;
         
         Set<Integer> set = new TreeSet<>();
         Set<Integer> set3 = new TreeSet<>();
@@ -29,10 +28,10 @@ class Solution {
             } else if (set.contains(num + 1)) {
                 set.remove(num + 1);
             } else {
-                count++;
+                answer--;
             }
         }
         
-        return n-count;
+        return answer;
     }
 }
