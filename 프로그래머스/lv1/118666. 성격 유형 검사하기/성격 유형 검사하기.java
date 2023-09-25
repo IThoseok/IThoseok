@@ -5,10 +5,10 @@ class Solution {
         String answer = "";
         HashMap<String, Integer> map = new HashMap<>();
         for(int i=0;i<survey.length;i++){
-            if(choices[i]==1||choices[i]==2||choices[i]==3){
+            if(choices[i]<4){
                 String type = survey[i].substring(0, 1);
                 map.put(type, map.getOrDefault(type, 0) + Math.abs(choices[i]-4));
-            }else if(choices[i]==5||choices[i]==6||choices[i]==7){
+            }else if(choices[i]>4){
                 String type = survey[i].substring(1);
                 map.put(type, map.getOrDefault(type, 0) + choices[i]-4);
             }
