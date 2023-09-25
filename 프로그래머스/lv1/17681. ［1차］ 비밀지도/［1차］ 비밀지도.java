@@ -9,11 +9,6 @@ class Solution {
             answer[i] = binary.replaceAll("1", "#").replaceAll("0", " ");
         }
         
-        
-        
-        
-        
-        
         return answer;
     }
 }
