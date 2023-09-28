@@ -4,8 +4,7 @@ import java.util.stream.Collectors;
 class Solution {
     public int solution(String str1, String str2) {
         int answer = 0;
-        //Set<String> set1 = new HashSet<>();
-       //Set<String> set2 = new HashSet<>();
+
         List<String> list1 = new ArrayList<>();
         List<String> list2 = new ArrayList<>();
         
@@ -46,9 +45,6 @@ class Solution {
                 union.remove(union.indexOf(str));
             }
         }
-        
-        System.out.println(union);
-        System.out.println(intersection);
         
         if(union.size() == 0) return 65536;
         
