@@ -10,16 +10,17 @@ class Solution {
             }
         }
         
-        ArrayList<Integer> list = new ArrayList<>();
-        
+        int num = 10000;
         for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
-            if(list.size()==3){
+            if(num==0){
                 break;
             }
             int value = entry.getValue();
-            list.add(value);
+            answer += value*num;
+            num /= 100;
+
         }
         
-        return list.get(0)*10000 + list.get(1)*100 + list.get(2);
+        return answer;
     }
 }
