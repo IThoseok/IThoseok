@@ -4,7 +4,7 @@ class Solution {
         
         int[][] Array = new int[numbers.length+1][];
 
-        // 각 행에 배열 할당
+        // 각 행에 배열 할당 
         Array[0] = new int[] {0};
         for(int i=1;i<=numbers.length;i++){
             Array[i] = new int[(int)Math.pow(2, i)];
