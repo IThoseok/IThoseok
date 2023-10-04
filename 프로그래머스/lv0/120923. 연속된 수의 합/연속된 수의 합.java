@@ -5,9 +5,7 @@ class Solution {
             if(num%2!=0){
                 answer[i] = total/num -num/2 +i;
             }else{
-
                 answer[i] = (total/(num/2) - (num-1))/2 +i;
-            
             }
         }
         
