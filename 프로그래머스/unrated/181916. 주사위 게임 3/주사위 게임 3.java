@@ -10,7 +10,6 @@ class Solution {
         map.put(b, map.getOrDefault(b, 0) + 1);
         map.put(c, map.getOrDefault(c, 0) + 1);
         map.put(d, map.getOrDefault(d, 0) + 1);
-        //System.out.println(map);
         
         if(map.size()==1){
             return 1111 * a;
@@ -21,7 +20,7 @@ class Solution {
         List<Entry<Integer, Integer>> sortedList = new ArrayList<>(map.entrySet());
 
         sortedList.sort((entry1, entry2) -> entry2.getValue().compareTo(entry1.getValue()));
-        System.out.println(sortedList);
+
         if(map.size()==3){
             return sortedList.get(1).getKey() * sortedList.get(2).getKey();
         }
